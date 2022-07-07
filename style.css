@@ -75,23 +75,34 @@ h1 {
   position: absolute;
   top: 30px;
   right: 30px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.faq-toggle:focus {
+  outline: none;
 }
 
 .faq-toggle .fa-times {
   display: none;
 }
 
-.faq.active .fa-times {
+.faq.active .faq-toggle .fa-times {
   display: block;
-  background-color: #999;
   color: #fff;
-  padding: 5px;
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  justify-content: center;
 }
 
-.faq.active .fa-chevron-down {
+.faq.active .faq-toggle .fa-chevron-down {
   display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #999;
 }
